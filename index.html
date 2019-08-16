@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Horetska.Photo</title>
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/app.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__container container">
+            <a href="/" class="header__logo"><img src="img/logo-header.png" alt="Horetska.Photo"></a>
+            <nav class="header__nav" role="navigation">
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Портфолио</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="services.html" class="menu__link">Услуги</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Отзывы</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__contact">
+                <a class="header__contact-phone" href="tel:+38-099-057-91-64">+38 (099) 057 91 64</a>
+                <p class="header__contact-text">Свяжитесь по телефону или</p>
+                <a class="header__contact-link" href="#request">оставьте заявку</a>
+            </div>
+        </div>
+    </header>
+
+
+    <!----------------------------------------------->
+    <main class="hero" id="hero">
+        <div class="slider hero__slider">
+
+            <div class="slide">
+                <div class="hero__container container">
+                    <h1 class="hero__title">Индивидуальная</h1>
+                    <h1 class="hero__title hero__title-filled">фотосессия</h1>
+                    <button class="hero__btn btn" href="#">Смотреть примеры</button>
+                </div>
+                <svg class="hero__golden-ratio">
+                    <use xlink:href="#golden-ratio"></use>
+                </svg>
+                <div class="hero__img-wrapper">
+                    <img class="hero__img" src="img/bitmap/home-hero-01.jpg" alt="Индивидуальная фотосессия">
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="hero__container container">
+                    <h1 class="hero__title">Love</h1>
+                    <h1 class="hero__title hero__title-filled">Story</h1>
+                    <button class="hero__btn btn" href="#">Смотреть примеры</button>
+                </div>
+                <svg class="hero__golden-ratio">
+                    <use xlink:href="#golden-ratio"></use>
+                </svg>
+                <div class="hero__img-wrapper">
+                    <img class="hero__img" src="img/bitmap/home-hero-02.jpg" alt="Индивидуальная фотосессия">
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!----------------------------------------------->
+    <section class="about-me">
+        <p class="about-me__quote">Photo is a <span id="pink">moment</span>, Moment is your life.</p>
+
+        <div class="about-me__content container">
+            <div class="about-me__img-wrapper wrapper-img">
+                <img src="img/bitmap/home-about-me.jpg" alt="Horetska Lilia" class="cover-img about-me__img">
+            </div>
+            <div class="about-me__info">
+                <h3 class="about-me__title">Привет</h3>
+                <p class="about-me__text">Вы на сайте профессионального фотографа, а значит Вам интересны мои услуги. Если так, то могу уверить Вас, что Вы получите 100%-ую качественную съемку, где делаются акценты на эмоциях и впечатлениях.<br>Вам не нужно представлять какой-то образ, лишь быть самим собой. Я и моя камера заметим, что ваше сердечко чувствует в тот момент и вы получите свою историю, которую сможете просматривать как фильм в любое время. Я занимаюсь фотографией 3 года, фотографирую лав-стори и индивидуальные фотосеты. Профи в обработке и упаковке фотографий.<br>Буду рада увидеть Вас через свой объектив.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!----------------------------------------------->
+    <section class="video container">
+        <h3 class="video__title">Познакомимся<br>поближе</h3>
+        <div class="video__media">
+            <iframe class="video__frame" src="https://www.youtube.com/embed/KCCqqPqDqSY?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+
+    <!----------------------------------------------->
+    <section class="service">
+        <div class="service__content container-2">
+            <h3 class="service__title">Мои услуги</h3>
+            <ul class="service__items">
+
+                <li class="service__items-item">
+                    <div class="service__items-content">
+                        <img class="service__items-img" src="img/icons/home-service-01.svg" alt="фотосессии">
+                        <h4 class="service__items-title">Фотосесии</h4>
+                    </div>
+                    <div class="service__items-number">01</div>
+                </li>
+
+                <li class="service__items-item">
+                    <div class="service__items-content">
+                        <img class="service__items-img" src="img/icons/home-service-02.svg" alt="Подарочные cертификаты">
+                        <h4 class="service__items-title">Подарочные<br>сертификаты</h4>
+                    </div>
+                    <div class="service__items-number">02</div>
+                </li>
+
+                <li class="service__items-item">
+                    <div class="service__items-content">
+                        <img class="service__items-img" src="img/icons/home-service-03.svg" alt="Фото-продукция">
+                        <h4 class="service__items-title">Фото-продукция</h4>
+                    </div>
+                    <div class="service__items-number">03</div>
+                </li>
+
+            </div>
+            <button class="btn-link service__btn" href="services.html">Ознакомиться с услугами</button>
+        </section>
+
+
+
+        <!----------------------------------------------->
+
+        <section class="portfolio">
+            <div class="portfolio__content container-2">
+                <h3 class="portfolio__title">Портфолио</h3>
+                <ul class="portfolio__items">
+                    <li class="portfolio__item" id="portfolio__item-01">
+                        <div class="portfolio__item-img-gradient"></div>
+                        <h4 class="portfolio__item-title">Love Story</h4>
+                        <div class="portfolio__item-img-wrapper wrapper-img">
+                            <img class="portfolio__item-img cover-img" src="img/bitmap/home-portfolio-01.jpg" alt="Love Story">
+                        </div>
+                    </li>
+
+
+                    <li class="portfolio__item" id="portfolio__item-02">
+                        <div class="portfolio__item-img-gradient"></div>
+                        <h4 class="portfolio__item-title" id="portfolio__title-02">Индивидуальная<br>фотосессия</h4>
+                        <div class="portfolio__item-img-wrapper wrapper-img">
+                            <img class="portfolio__item-img cover-img" src="img/bitmap/home-portfolio-02.jpg" alt="Индивидуальная фотосессия">
+                        </div>
+                    </li>
+
+
+                    <li class="portfolio__item" id="portfolio__item-03">
+                        <div class="portfolio__item-img-gradient"></div>
+                        <h4 class="portfolio__item-title" id="portfolio__title-03">Репортаж</h4>
+                        <div class="portfolio__item-img-wrapper wrapper-img">
+                            <img class="portfolio__item-img cover-img" src="img/bitmap/home-portfolio-03.jpg" alt="Репортаж">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <button class="btn-link portfolio__btn" href="portfolio.html">Перейти к портфолио</button> 
+            <img class="portfolio__bgr" src="img/bgr/cloud-3.svg">
+            <img class="portfolio__line" src="img/bgr/line-3.svg">
+
+        </section>
+
+
+        <!----------------------------------------------->
+        <section class="request" id="request">
+            <div class="request__content container">
+                <div class="request__info">
+                    <h2 class="request__title">Оставьте заявку<br>для связи</h2>
+                    <form action="" class="request__form">
+                        <input id='contact-message' class="request__field input" type="text" autocomplete="name" name="Имя" placeholder="Ваше имя">
+                        <span class='form-error'>Обязательное поле</span>
+                        <input class="request__field input" type="tel" autocomplete="tel" name="Имя" placeholder="Ваш номер телефона">
+                        <span class='form-error'>Обязательное поле</span>
+                        <input class="request__btn btn-on-light" type="submit" value="Оставить заявку">
+                    </form>
+                </div>
+                <div class="request__img-wrapper wrapper-img">
+                    <img class="request__img cover-img" src="img/bitmap/request.jpg" alt="фотография">
+                </div>
+                <img class="request__img-leaf" src="img/request-leaf.svg">
+            </div>
+            <img class="request__line" src="img/bgr/line-4.svg">
+
+        </section>
+
+        <!----------------------------------------------->
+
+        <section class="contacts">
+            <div class="contacts__content container-2">
+                <h2 class="contacts__title">Контакты</h2>
+                <ul class="contacts__list">
+                    <li class="contacts__item">
+                        <a class="contacts__link" href="https://www.instagram.com/horetska.photo/">
+                            <img src="img/socials/instagram.svg" alt="instagram" class="contacts__icon">
+                            <img src="img/socials/instagram-bgr.svg" alt="instagram" class="contacts__icon-bgr">
+                        </a>
+                        <a class="contacts__link-title" href="https://www.instagram.com/horetska.photo/">@horetska.photo</a>
+                    </li>
+
+                    <li class="contacts__item">
+                        <a class="contacts__link" href="">
+                            <img src="img/socials/facebook.svg" alt="facebook" class="contacts__icon">
+                            <img src="img/socials/facebook-bgr.svg" alt="facebook" class="contacts__icon-bgr">
+                        </a>
+                        <a class="contacts__link-title" href="">lilia.horetska</a>
+                    </li>
+
+                    <li class="contacts__item">
+                        <a class="contacts__link" href="">
+                            <img src="img/socials/telegram.svg" alt="telegram" class="contacts__icon">
+                            <img src="img/socials/telegram-bgr.svg" alt="telegram" class="contacts__icon-bgr">
+                        </a>
+                        <a class="contacts__link-title" href="">photopizz</a>
+                    </li>
+
+                    <li class="contacts__item">
+                        <a class="contacts__link" href="">
+                            <img src="img/socials/mail.svg" alt="mail" class="contacts__icon">
+                            <img src="img/socials/mail-bgr.svg" alt="mail" class="contacts__icon-bgr">
+                        </a>
+                        <a class="contacts__link-title" href="">lilia.horetskaa<br>@gmail.com</a>
+                    </li>
+
+                    <li class="contacts__item">
+                        <a class="contacts__link" href="">
+                            <img src="img/socials/phone-number.svg" alt="phone-number" class="contacts__icon">
+                            <img src="img/socials/phone-number-bgr.svg" alt="phone-number" class="contacts__icon-bgr">
+                        </a>
+                        <a class="contacts__link-title" href="">+38(099)057-91-64</a>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+        <!----------------------------------------------->
+
+        <footer class="footer">
+            <div class="container footer__content">
+                <div class="footer__logo-wrapper">
+                    <a href="../#hero" class="footer__logo"><img src="img/logo-footer.png" alt="Horetska.Photo"></a>
+                    <p class="footer__slogan">Photo is a moment, moment is your life</p>
+                </div>
+                <nav class="footer__nav">
+                    <ul class="menu">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link footer__link">Портфолио</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="services.html" class="menu__link footer__link">Услуги</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link footer__link">Отзывы</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link footer__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+
+
+        <!----------------------------------------------->
+        <div class="visually-hidden">
+            <svg>
+
+
+
+
+
+
+                <symbol id="golden-ratio" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" object-fit="cover" viewBox="0 0 1393 862" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M860.977 861H1V1.01978H860.977V861Z" stroke="white" stroke-miterlimit="1.41421" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1392.19 861H860.977V329.788H1392.19V861Z" stroke="white" stroke-miterlimit="1.41421" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1392.19 329.788H1063.4V0.999969H1392.19V329.788Z" stroke="white" stroke-miterlimit="1.41421" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1063.34 203.401H860.974V1.03011H1063.34V203.401Z" stroke="white" stroke-miterlimit="1.41421" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M987.226 329.788H860.974V203.397H987.226V329.788Z" stroke="white" stroke-miterlimit="1.41421" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1063.4 329.788H987.225V253.613H1063.4V329.788Z" stroke="white" stroke-miterlimit="1.41421" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1063.4 253.614H1013.03V203.381H1063.4V253.614Z" stroke="white" stroke-miterlimit="1.41421" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1013.03 229.192H987.225V203.385H1013.03V229.192Z" stroke="white" stroke-miterlimit="1.41421" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="golden-ratio-path" d="M1 1.5C1 475.247 387.18 861 860.927 861H860.974C1153.75 861 1392.19 622.584 1392.19 329.808C1392.19 148.871 1244.29 1.01978 1063.36 1.01978H1063.34C951.528 1.01978 860.974 91.5579 860.974 203.374C860.974 272.475 918.124 329.808 987.225 329.808C1029.93 329.808 1063.4 296.311 1063.4 253.606C1063.4 227.216 1039.43 203.377 1013.03 203.377C996.721 203.377 987.225 212.873 987.225 229.184" stroke="white" stroke-miterlimit="1.41421" stroke-linecap="square"/>
+                </symbol>
+
+
+                <!---------------------------- SOCIALS -->
+
+                <symbol id="svg-telegram" viewBox="0 0 300 300">
+                    <g>
+                        <path d="M5.299,144.645l69.126,25.8l26.756,86.047c1.712,5.511,8.451,7.548,12.924,3.891l38.532-31.412
+                        c4.039-3.291,9.792-3.455,14.013-0.391l69.498,50.457c4.785,3.478,11.564,0.856,12.764-4.926L299.823,29.22
+                        c1.31-6.316-4.896-11.585-10.91-9.259L5.218,129.402C-1.783,132.102-1.722,142.014,5.299,144.645z M96.869,156.711l135.098-83.207
+                        c2.428-1.491,4.926,1.792,2.841,3.726L123.313,180.87c-3.919,3.648-6.447,8.53-7.163,13.829l-3.798,28.146
+                        c-0.503,3.758-5.782,4.131-6.819,0.494l-14.607-51.325C89.253,166.16,91.691,159.907,96.869,156.711z"/>
+                    </g>
+                </symbol>
+
+                <symbol id="svg-facebook" viewBox="0 0 12 25">
+                    <path fill-rule="evenodd"
+                    d="M11.820,8.958 L7.682,8.958 L7.682,5.966 C7.682,5.046 8.638,4.832 9.084,4.832 C9.529,4.832 11.757,4.832 11.757,4.832 L11.757,0.790 L8.698,0.778 C4.512,0.778 3.560,3.791 3.560,5.719 L3.560,8.958 L0.525,8.958 L0.525,13.122 L3.560,13.122 C3.560,18.465 3.560,24.358 3.560,24.358 L7.682,24.358 C7.682,24.358 7.682,18.401 7.682,13.122 L11.181,13.122 L11.820,8.958 Z"/>
+                </symbol>
+
+                <symbol id="svg-youtube" viewBox="0 -77 512.00213 512">
+                    <g>
+                        <path xmlns="http://www.w3.org/2000/svg"
+                        d="m501.453125 56.09375c-5.902344-21.933594-23.195313-39.222656-45.125-45.128906-40.066406-10.964844-200.332031-10.964844-200.332031-10.964844s-160.261719 0-200.328125 10.546875c-21.507813 5.902344-39.222657 23.617187-45.125 45.546875-10.542969 40.0625-10.542969 123.148438-10.542969 123.148438s0 83.503906 10.542969 123.148437c5.90625 21.929687 23.195312 39.222656 45.128906 45.128906 40.484375 10.964844 200.328125 10.964844 200.328125 10.964844s160.261719 0 200.328125-10.546875c21.933594-5.902344 39.222656-23.195312 45.128906-45.125 10.542969-40.066406 10.542969-123.148438 10.542969-123.148438s.421875-83.507812-10.546875-123.570312zm0 0"/>
+                        <path xmlns="http://www.w3.org/2000/svg"
+                        d="m204.96875 256 133.269531-76.757812-133.269531-76.757813zm0 0" fill="#fff"/>
+                    </g>
+                </symbol>
+
+                <symbol id="svg-tw" viewBox="0 0 512 512">
+                    <defs>
+                        <style>
+                            /*.around,.icon{fill:#afafaf;}*/
+                            /*.icon{fill-rule:evenodd;}*/
+                        </style>
+                    </defs>
+                    <path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+                    c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+                    c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+                    c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+                    c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+                    c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+                    C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+                    C480.224,136.96,497.728,118.496,512,97.248z"/>
+                </symbol>
+
+                <!----------------------- background elements -->
+
+                <symbol id="bgr-cloud-3" width="1232" height="833" viewBox="0 0 1232 833" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.5" d="M150.501 448.501C228.501 362.001 171.237 270.112 295.001 182.001C416.501 95.5006 611.385 208.114 674.001 132.001C757.501 30.5005 1043.5 -50.2719 1163 37.9998C1306.5 144 1205.5 582.499 1041.5 651.5C825.205 742.504 718.499 565.999 581 716.5C479.789 827.281 71.0008 895.501 10.5008 748.001C-31.3604 645.942 64.1036 544.313 150.501 448.501Z" fill="#DDECF2"/>
+                </symbol>
+
+
+
+
+            </svg>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+        <script src='scripts/slick.min.js'></script>
+        <script src="scripts/app.js"></script>
+    </body>
+    </html>
