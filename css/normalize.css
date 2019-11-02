@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   vertical-align: baseline;
+  border-radius: 4px;
 }
 
 html, body {
@@ -70,12 +71,17 @@ ul, ol {
 }*/
 
 svg {
-  display: inline-block;
+  display: block;
+  margin: auto;
 }
 
 /*path, circle, rect {
   fill: inherit;
 }*/
+
+svg path {
+    fill: inherit;
+}
 
 body{
   margin: 0;

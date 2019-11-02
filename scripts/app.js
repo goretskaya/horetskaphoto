@@ -1,21 +1,5 @@
-$(document).ready(function($){
-    console.log("bfk")
-//   $('.goods-slider').slick({
-//     // centerMode: true,
-//     // centerPadding: '60px',
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     dots: true,
-//     arrows: true,
-//     infinity: true,
-//     fade: true,
-//     // autoplaySpeed: 1000,
-//     cssEase: 'easeOut',
-//     speed: 1500
 
-// });
-});
-
+//slider (home)
 
 ;(function($){
   "use strict";
@@ -24,41 +8,85 @@ $(document).ready(function($){
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    infinity: true,
+    dots: true,
+    infinite: true,
     fade: true,
     autoplay: true,
-    autoplaySpeed: 1000,
-    cssEase: 'easeOut',
-    dots: false,
-    speed: 300,
-    speed: 1500
-  });
+    autoplaySpeed: 2000,
+    cssEase: 'linear',
+    speed: 500
+
+  })
 })(jQuery);
 
 
-  $('.goods-slider').slick({
-    centerMode: true,
+//slider (services)
+
+$('.photo-goods__slider').slick({
+  centerMode: true,
   centerPadding: '60px',
   slidesToShow: 3,
   responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 3
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1
-      }
+  {
+    breakpoint: 768,
+    settings: {
+      arrows: false,
+      centerMode: true,
+      centerPadding: '40px',
+      slidesToShow: 3
     }
+  },
+  {
+    breakpoint: 480,
+    settings: {
+      arrows: false,
+      centerMode: true,
+      centerPadding: '40px',
+      slidesToShow: 1
+    }
+  }
+  ]
+});
+
+//slider (testimonials)
+
+$('.testimonials__slider').slick({
+  centerPadding: '1%',
+  centerMode: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  responsive: [
+  {
+    breakpoint: 1279,
+    settings: {
+      arrows: true,
+      centerPadding: '10px',
+      centerMode: true,
+      slidesToShow: 2.5,
+      slidesToScroll: 2
+    }
+  },
+
+  {
+    breakpoint: 1020,
+    settings: {
+      arrows: true,
+      centerPadding: '10px',
+      centerMode: true,
+      slidesToShow: 2,
+      slidesToScroll: 1
+    }
+  },
+
+  {
+    breakpoint: 768,
+    settings: {
+      arrows: false,
+      centerPadding: '5%',
+      centerMode: true,
+      slidesToShow: 1
+    }
+  }
   ]
 });
 
@@ -66,16 +94,62 @@ $(document).ready(function($){
 //header
 
 $(function() {
-    $(window).on("scroll", function() {
-        if($(window).scrollTop() > 50) {
-            $(".header").addClass("active");
-        } else {
+  $(window).on("scroll", function() {
+    if($(window).scrollTop() > 100) {
+      $(".header").addClass("active");
+      
+    } else {
             //remove the background property so it comes transparent again (defined in your css)
-           $(".header").removeClass("active");
-        }
-    });
+            $(".header").removeClass("active");
+          }
+        });
 });
 
+$(function() {
+  $(window).on("scroll", function() {
+    if($(window).scrollTop() > 100) {
+      $(".header__logo-svg").addClass("active-logo");
+      
+    } else {
+            //remove the background property so it comes transparent again (defined in your css)
+            $(".header__logo-svg").removeClass("active-logo");
+          }
+        });
+});
+
+$(function() {
+  $(window).on("scroll", function() {
+    if($(window).scrollTop() > 100) {
+      $(".header__contact-location").addClass("active-location");
+
+      
+    } else {
+            $(".header__contact-location").removeClass("active-location");
+
+          }
+        });
+});
+
+
+$(function() {
+  $(window).on("scroll", function() {
+    if($(window).scrollTop() > 100) {
+      $(".menu-toggle").addClass("active-menu-toggle");
+
+      
+    } else {
+            $(".menu-toggle").removeClass("active-menu-toggle");
+
+          }
+        });
+});
+
+$(function() {
+    function animationStart() {
+        $('.golden-ratio-path').addClass('fin');
+    }
+    setTimeout(animationStart, 200);
+});
 
 //burger
 
@@ -84,107 +158,138 @@ $('.menu-toggle').on('click', function(){
   $('.menu').toggleClass('menu-active');
   $('.menu-toggle').toggleClass('menu-toggle-active');
   $('menu').removeClass('menu-active');
-  $('menu-toggle').removeClass('menu-toggle-active');
+  $('menu-toggle').removeClass('menu-toggle-active'); 
 });
-
-
 
 //form
 
+var userNameInputId = "#contact-name-input";
+var userPhoneInputId = "#contact-phone-input";
+var userInputErrorPartOfId = "-error";
+var userInputInvalidClass = "invalid";
 
-console.log('test');
+var validateUserName = function () {
+  let isValid = !state.isSubmitedOnce || !isNullOrUndefinedOrEmpty(state.user.Name);
+  updateInvalidClass(userNameInputId, isValid);
+  state.user.IsNameValid = isValid;
+}
 
+var validateUserPhone = function () {
+  let isValid = !state.isSubmitedOnce || !isNullOrUndefinedOrEmpty(state.user.Phone);
+  updateInvalidClass(userPhoneInputId, isValid);
+  state.user.IsPhoneValid = isValid;
+}
 
-$('.request__form').on('submit', function(e){
-  e.preventDefault();
+var validateUser = function () {
+  validateUserName();
+  validateUserPhone();
+  return state.user.IsPhoneValid && state.user.IsNameValid;
+}
 
-  let inputEmail = $('#contact-email'),
-    inputName = $('#contact-name'),
-    inputText = $('#contact-message');
-
-  $('.ba-contact-error').css('display', 'none');
-
-  let validateEmail = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/
-
-  if (!validateEmail.test(inputEmail.val())){
-    // alert ('incorect email');
-    inputEmail.closest('.request__field').find('.form-error').css('display', 'block')
-  }
-
-
-  if( inputName.val() === '' ){
-    inputName.closest('.request__field').find('.form-error').css('display', 'block')
-  }
-
-  if( inputText.val().length < 5 ){
-    inputText.closest('.request__field').find('.form-error').css('display', 'block')
-  }
-
-})
-
-
-$('.request__form').on('submit', function (e) {
-    e.preventDefault();
-
-    let inputs = $(this).find('[data-valid]');
-    console.log(inputs);
-
-    let isValid = true;
-
-    inputs.each(function(input) {
-        isValid = validate.call(this);
-    })
-
-    isValid != false ? isValid = true : isValid =false;
-
-    console.log('submit valid - ' + isValid);
+$(userNameInputId).on('change', function (e) {
+  state.user.Name = e.target.value;
+  validateUserName();
 });
 
+$(userPhoneInputId).on('change', function (e) {
+  state.user.Phone = e.target.value;
+  validateUserPhone();
+});
+
+$('#contact-form').on('submit', function (e) {
+  e.preventDefault();
+  console.log("REQUEST");
+  state.isSubmitedOnce = true;
+  var isValid = validateUser();
+  if (isValid) {
+    console.log("Valid inputs, sending data..");
+    
+    var textToSend = 
+`*Contact Request:*
+Name: ${state.user.Name}
+Phone: ${state.user.Phone}
+Plan: ${state.user.Plan}
+`;
+
+    sendToTelegram(textToSend).then(function() {
+      $("#contant-form-success-modal").addClass("visible");
+    }).catch(function() {
+      $("#contant-form-error-modal").addClass("visible");
+    });
+
+  } else {
+    console.log("Invalid inputs");
+  }
+  return false;
+});
+
+// state
+
+var state = {
+  user: {
+    Name: undefined,
+    IsNameValid: true,
+    Phone: undefined,
+    IsPhoneValid: true,
+    Plan: undefined,
+  },
+  isSubmitedOnce: false,
+};
+
+state.user.Name = undefined;
+state.user.Phone = undefined;
+state.user.Plan = undefined;
 
 
+// services
 
-let validate = function () {
-  let inputData = $(this).data('valid').split(' '),
-  inputValue = $(this).val();
+var serviceInfoIdPart = ".service-info-";
+var serviceInfoTypes = [
+  "light",
+  "standard",
+  "luxe"
+];
 
-  let validateStatus = true;
 
-  inputData.forEach(element => {
-    switch (element) {
-      case 'required':
-      validateStatus = validRequired(inputValue);
-      break;
+serviceInfoTypes.forEach(function(serviceInfoType) {
+  $(serviceInfoIdPart + serviceInfoType).on("click", function() {
+      state.user.Plan = serviceInfoType;
+    });
+});
 
-      case 'email':
-      validateStatus = validEmail(inputValue);
-      break;
-      
-      default:
-      break;
+// details..
+
+var postRequest = function(url, formData) {
+  var data = JSON.stringify(formData);
+  return fetch(url, {
+    method : "POST",
+    body: data,
+    headers: {
+      "Content-Type": "application/json"
     }
   });
-  return validateStatus;
 }
 
+var sendToTelegram = function(text) {
+  console.log("Sending to telegram: " + text);
+  return postRequest("http://18.196.167.26:7899/api/messages/SendMessage",
+  {
+    Text: text
+  });
+};
 
-
-
-$('[data-valid]').on('change', validate)
-
-let validRequired = function (value) {
-    if (value != '') {
-        
-    } else {
-        console.log('This field is required');
-        return false
-    }
+var isNullOrUndefinedOrEmpty = function (text) {
+  return text == null || text == undefined || text == "";
 }
 
-let validEmail = function (value) {
-    let validateEmail = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
-
-    if (!validateEmail.test(value)) {
-        console.log('Email is invalid');
-        return false
-    }
+var updateInvalidClass = function (elemId, isValid) {
+  let elem = $(elemId);
+  let elemError = $(elemId + userInputErrorPartOfId);
+  if (isValid && elem.hasClass(userInputInvalidClass)) {
+    elem.removeClass(userInputInvalidClass);
+    elemError.removeClass("visible");
+  } else if (!isValid && !elem.hasClass(userInputInvalidClass)) {
+    elem.addClass(userInputInvalidClass);
+    elemError.addClass("visible");
+  }
 }
