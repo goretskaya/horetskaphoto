@@ -12,6 +12,20 @@
 
 </head>
 <body>
+    <!------------------success-modal----------------------------->
+    <div id="contant-form-success-modal" class="success-modal">
+        <div class="success-modal__content">
+            <div class="success-modal__info">
+                <h2 class="success-modal__title">Спасибо, что<br>оставили заявку</h2>
+                <p class="success-modal__text">Ожидайте, я с вами свяжусь в течении дня для уточнения детелей</p>
+                <button id="close" class="success-modal__btn btn-primary">Спасибо, ожидаю</button>
+            </div>
+            <button id="close-icon" class="success-modal__btn-icon">
+                <img src="img/icons/close.svg" alt="Закрыть">
+            </button>
+        </div>
+    </div>
+    <!----------------------------------------------->
     <header class="header active-constant">
         <div class="header__container container">
             <a href="/" class="header__logo">
@@ -56,32 +70,58 @@
         <div class="portfolio-individual__fixed">
             <a href="portfolio.html" class="portfolio-individual__fixed-go-back">Назад к портфолио</a>
             <h1 class="portfolio-individual__fixed-title">Индивидуальная фотосессия</h1>
-            <ul class="portfolio-individual__fixed-items">
-                <li class="portfolio-individual__fixed-item-active">Photosession Name One, Kyiv</li>
-                <li class="portfolio-individual__fixed-item">Photosession Two, Cyprus</li>
-                <li class="portfolio-individual__fixed-item">Photosession Name Three, Sumy</li>
-                <li class="portfolio-individual__fixed-item">Photosession Four, Kyiv</li>
-                <li class="portfolio-individual__fixed-item">Photosession Name Five, Kyiv</li>
-            </ul>
+            <div class="tab portfolio-individual__fixed-items">
+                <button class="tablinks portfolio-individual__fixed-item active-tab" onclick="openPhotos(event, 'Photos1')">Photosession Name One, Kyiv</button>
+                <button class="tablinks portfolio-individual__fixed-item" onclick="openPhotos(event, 'Photos2')">Photosession Two, Cyprus</button>
+                <button class="tablinks portfolio-individual__fixed-item">Photosession Name Three, Sumy</button>
+                <button class="tablinks portfolio-individual__fixed-item">Photosession Four, Kyiv</button>
+                <button class="tablinks portfolio-individual__fixed-item">Photosession Name Five, Kyiv</button>
+            </div>
         </div>
-        <div class="portfolio-individual__scroll">
+
+        <div id="Photos1" class="tabcontent portfolio-individual__scroll">
             <div class="portfolio-individual__scroll-img-wrapper wrapper-img">
-                <img class="portfolio-individual__scroll-img cover-img " src="img/portfolio/individual/01.jpg" alt="индивидуальная фотосессия">
+                <img class="portfolio-individual__scroll-img cover-img " src="img/portfolio/individual/1.01.jpg" alt="индивидуальная фотосессия">
             </div>
             <div class="portfolio-individual__scroll-img-wrapper-2 wrapper-img">
-                <img class="portfolio-individual__scroll-img-2 cover-img " src="img/portfolio/individual/02.jpg" alt="индивидуальная фотосессия">
+                <img class="portfolio-individual__scroll-img-2 cover-img " src="img/portfolio/individual/1.02.jpg" alt="индивидуальная фотосессия">
+            </div>
+            
+            <div class="portfolio-individual__scroll-img-wrapper-3 wrapper-img">
+                <div class="portfolio-individual__scroll-img-wrapper-3-1 wrapper-img">
+                    <img class="portfolio-individual__scroll-img-3 cover-img " src="img/portfolio/individual/1.03.jpg" alt="индивидуальная фотосессия">
+                </div>
+                <div class="portfolio-individual__scroll-img-wrapper-3-1 wrapper-img">
+                    <img class="portfolio-individual__scroll-img-3 cover-img " src="img/portfolio/individual/1.04.jpg" alt="индивидуальная фотосессия">
+                </div>
+            </div>
+            <div class="portfolio-individual__scroll-img-wrapper-2 wrapper-img">
+                <img class="portfolio-individual__scroll-img-2 cover-img " src="img/portfolio/individual/1.05.jpg" alt="индивидуальная фотосессия">
+            </div>
+            <div class="portfolio-individual__scroll-img-wrapper-2 wrapper-img">
+                <img class="portfolio-individual__scroll-img-2 cover-img " src="img/portfolio/individual/1.06.jpg" alt="индивидуальная фотосессия">
+            </div>
+        </div>
+
+        <div id="Photos2" class="tabcontent portfolio-individual__scroll">
+            <div class="portfolio-individual__scroll-img-wrapper wrapper-img">
+                <img class="portfolio-individual__scroll-img cover-img " src="img/portfolio/individual/2.01.jpg" alt="индивидуальная фотосессия">
+            </div>
+            <div class="portfolio-individual__scroll-img-wrapper-2 wrapper-img">
+                <img class="portfolio-individual__scroll-img-2 cover-img " src="img/portfolio/individual/2.02.jpg" alt="индивидуальная фотосессия">
             </div>
             
             <div class="portfolio-individual__scroll-img-wrapper-3 wrapper-img">
                 <div class="portfolio-individual__scroll-img-wrapper-2 wrapper-img">
-                    <img class="portfolio-individual__scroll-img-3 cover-img " src="img/portfolio/individual/03.jpg" alt="индивидуальная фотосессия">
+                    <img class="portfolio-individual__scroll-img-3 cover-img " src="img/portfolio/individual/2.03.jpg" alt="индивидуальная фотосессия">
                 </div>
                 <div class="portfolio-individual__scroll-img-wrapper-2 wrapper-img">
-                    <img class="portfolio-individual__scroll-img-3 cover-img " src="img/portfolio/individual/04.jpg" alt="индивидуальная фотосессия">
+                    <img class="portfolio-individual__scroll-img-3 cover-img " src="img/portfolio/individual/2.04.jpg" alt="индивидуальная фотосессия">
                 </div>
             </div>
-
         </div>
+
+
     </div>
 
 
